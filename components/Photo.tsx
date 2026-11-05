@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { asset } from "@/lib/asset";
 
 type PhotoProps = {
   src: string;
@@ -17,17 +17,18 @@ export function Photo({
   height,
   priority = false,
   className,
-  sizes = "(min-width: 1024px) 50vw, 100vw",
 }: PhotoProps) {
   return (
-    <Image
-      src={src}
+    // Native img so GitHub Pages gets /TGarage/... paths. next/image
+    // leaves local src unprefixed when images.unoptimized is on.
+    <img
+      src={asset(src)}
       alt={alt}
       width={width}
       height={height}
-      priority={priority}
       className={className}
-      sizes={sizes}
+      fetchPriority={priority ? "high" : undefined}
+      decoding="async"
     />
   );
 }

@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
 import { WhatsApp } from "@/components/WhatsApp";
+import { asset } from "@/lib/asset";
 import { businessSchema } from "@/lib/schema";
 import { site } from "@/lib/site";
 import "./globals.css";
@@ -40,8 +41,8 @@ export const metadata: Metadata = {
   authors: [{ name: "T Garage" }],
   alternates: { canonical: "/" },
   icons: {
-    icon: "/brand/logo-192.png",
-    apple: "/brand/logo-192.png",
+    icon: asset("/brand/logo-192.png"),
+    apple: asset("/brand/logo-192.png"),
   },
   openGraph: {
     type: "website",
