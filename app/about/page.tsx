@@ -27,10 +27,12 @@ export default function AboutPage() {
         image={media.dusk}
       />
 
-      <section className="wrap grid gap-12 py-16 md:grid-cols-[1.15fr_0.85fr] md:py-24">
+      <section className="wrap grid gap-10 py-12 sm:gap-12 sm:py-16 md:grid-cols-[1.15fr_0.85fr] md:py-24">
         <div>
           <p className="text-sm font-medium text-blue">The workshop</p>
-          <h2 className="mt-2 font-display text-4xl font-semibold tracking-tight md:text-5xl">Where the work happens</h2>
+          <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
+            Where the work happens
+          </h2>
           <p className="mt-5 max-w-xl text-muted">
             You will find us in Kizhakethala, next to Korambayil Hospital. The covered bay is where foam wash happens — the same space you see in the stills from our Instagram.
           </p>
@@ -39,8 +41,8 @@ export default function AboutPage() {
           </p>
           <p className="mt-4 max-w-xl text-muted">If you are unsure what to book, send a photo on WhatsApp.</p>
         </div>
-        <aside className="self-start bg-white p-8">
-          <p className="font-display text-5xl font-semibold tracking-tight text-blue">{site.since}</p>
+        <aside className="self-start bg-white p-6 sm:p-8">
+          <p className="font-display text-4xl font-semibold tracking-tight text-blue sm:text-5xl">{site.since}</p>
           <p className="mt-2 text-muted">Opened as T Garage. Same town, same work: wash, detail, coat.</p>
           <p className="mt-6 font-display text-2xl font-semibold tracking-tight">Kizhakethala, Manjeri</p>
           <p className="mt-1 text-sm text-muted">Malappuram · near Korambayil Hospital</p>
@@ -48,9 +50,9 @@ export default function AboutPage() {
       </section>
 
       <section className="grid md:grid-cols-2">
-        <Photo {...media.hero} className="h-[28rem] w-full object-cover md:h-full" sizes="50vw" />
-        <div className="flex flex-col justify-center bg-night px-8 py-14 text-white md:px-14">
-          <h2 className="font-display text-4xl font-semibold tracking-tight">How a visit works</h2>
+        <Photo {...media.hero} className="h-64 w-full object-cover sm:h-[28rem] md:h-full" sizes="50vw" />
+        <div className="flex flex-col justify-center bg-night px-5 py-12 text-white sm:px-8 sm:py-14 md:px-14">
+          <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">How a visit works</h2>
           <ol className="mt-6 space-y-4 text-white/80">
             <li>
               <span className="font-display font-semibold text-white">1. Wash first.</span> Coatings go on paint that has been cleaned and, if needed, corrected.
@@ -62,21 +64,21 @@ export default function AboutPage() {
               <span className="font-display font-semibold text-white">3. Book by name.</span> WhatsApp or phone. Name the car and the job.
             </li>
           </ol>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a href={defaultWhatsApp} className="btn btn-blue">
+          <div className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap">
+            <a href={defaultWhatsApp} className="btn btn-blue w-full sm:w-auto">
               WhatsApp
             </a>
-            <Link href="/services/" className="btn btn-ghost">
+            <Link href="/services/" className="btn btn-ghost w-full sm:w-auto">
               Services
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="wrap grid gap-3 py-16 md:grid-cols-3">
-        <Photo {...media.sign} className="h-[22rem] w-full object-cover md:h-[28rem]" sizes="33vw" />
-        <Photo {...media.bay} className="h-[22rem] w-full object-cover md:h-[28rem]" sizes="33vw" />
-        <Photo {...media.van} className="h-[22rem] w-full object-cover md:h-[28rem]" sizes="33vw" />
+      <section className="wrap grid gap-3 py-12 sm:py-16 md:grid-cols-3">
+        <Photo {...media.sign} className="h-56 w-full object-cover sm:h-[22rem] md:h-[28rem]" sizes="33vw" />
+        <Photo {...media.bay} className="h-56 w-full object-cover sm:h-[22rem] md:h-[28rem]" sizes="33vw" />
+        <Photo {...media.van} className="h-56 w-full object-cover sm:h-[22rem] md:h-[28rem]" sizes="33vw" />
       </section>
 
       <CtaBand title="Come in with the car." text="Call when you are close and we will bring you into the bay." />

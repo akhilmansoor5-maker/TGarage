@@ -29,17 +29,17 @@ export default function ContactPage() {
         image={media.glass}
       />
 
-      <section className="wrap grid gap-12 py-16 lg:grid-cols-[0.9fr_1.1fr] lg:py-24">
+      <section className="wrap grid gap-10 py-12 sm:gap-12 sm:py-16 lg:grid-cols-[0.9fr_1.1fr] lg:py-24">
         <div>
           <p className="text-sm font-medium text-blue">Visit</p>
-          <h2 className="mt-2 font-display text-4xl font-semibold tracking-tight">The workshop</h2>
+          <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight sm:text-4xl">The workshop</h2>
           <address className="mt-5 text-lg not-italic leading-relaxed">
             {site.name}
             <br />
             {addressLine}
           </address>
           <p className="mt-6">
-            <a className="font-display text-3xl font-semibold tracking-tight text-blue" href={`tel:${site.phoneTel}`}>
+            <a className="font-display text-[1.85rem] font-semibold tracking-tight text-blue sm:text-3xl" href={`tel:${site.phoneTel}`}>
               {site.phoneDisplay}
             </a>
           </p>
@@ -56,7 +56,7 @@ export default function ContactPage() {
             </li>
           </ul>
         </div>
-        <div className="bg-white p-6 md:p-8">
+        <div className="bg-white p-5 sm:p-6 md:p-8">
           <h2 className="font-display text-3xl font-semibold tracking-tight">Book a slot</h2>
           <p className="mt-3 text-muted">The form opens WhatsApp on {site.phoneDisplay}.</p>
           <div className="mt-6">
@@ -70,7 +70,7 @@ export default function ContactPage() {
           <iframe
             title="Map of T Garage near Korambayil Hospital, Manjeri"
             src={site.mapsEmbed}
-            className="h-[22rem] w-full border-0"
+            className="h-64 w-full border-0 sm:h-[22rem]"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />

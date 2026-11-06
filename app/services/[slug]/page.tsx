@@ -50,7 +50,7 @@ export default async function ServicePage({ params }: Props) {
           ]),
         ]}
       />
-      <section className="relative isolate min-h-[68vh] overflow-hidden bg-night">
+      <section className="relative isolate min-h-[62svh] overflow-hidden bg-night sm:min-h-[68vh]">
         <Photo
           src={service.image}
           alt=""
@@ -61,7 +61,7 @@ export default async function ServicePage({ params }: Props) {
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,17,31,0.5)_0%,rgba(7,17,31,0.18)_42%,rgba(7,17,31,0.84)_100%)]" />
-        <div className="wrap relative flex min-h-[68vh] items-end pb-14 pt-32">
+        <div className="wrap relative flex min-h-[62svh] items-end pb-16 pt-28 sm:min-h-[68vh] sm:pb-14 sm:pt-32">
           <div className="max-w-3xl text-white">
             <nav aria-label="Breadcrumb" className="text-sm text-white/65">
               <Link href="/services/" className="hover:text-white">
@@ -73,18 +73,18 @@ export default async function ServicePage({ params }: Props) {
             <p className="mt-6 text-sm font-medium text-white/70">
               {service.group} · Manjeri
             </p>
-            <h1 className="mt-3 font-display text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl">
+            <h1 className="mt-3 font-display text-[2rem] font-semibold leading-[1.12] tracking-tight sm:text-5xl md:text-7xl">
               {service.title}
             </h1>
             <p className="mt-5 max-w-xl text-lg text-white/82">{service.lead}</p>
-            <a href={defaultWhatsApp} className="btn btn-blue mt-8">
+            <a href={defaultWhatsApp} className="btn btn-blue mt-6 w-full sm:mt-8 sm:w-auto">
               Book {service.name}
             </a>
           </div>
         </div>
       </section>
 
-      <article className="wrap grid gap-12 py-16 md:grid-cols-[1.1fr_0.8fr] md:py-24">
+      <article className="wrap grid gap-10 py-12 sm:gap-12 sm:py-16 md:grid-cols-[1.1fr_0.8fr] md:py-24">
         <div>
           <h2 className="font-display text-3xl font-semibold tracking-tight">What is included</h2>
           <ul className="mt-5 space-y-3">
@@ -99,7 +99,7 @@ export default async function ServicePage({ params }: Props) {
         <aside className="bg-white p-6 md:p-8">
           <h2 className="font-display text-2xl font-semibold tracking-tight">Need this?</h2>
           <p className="mt-3 text-muted">{service.description}</p>
-          <Link href="/contact/" className="btn btn-blue mt-6">
+          <Link href="/contact/" className="btn btn-blue mt-6 w-full sm:w-auto">
             Contact
           </Link>
         </aside>

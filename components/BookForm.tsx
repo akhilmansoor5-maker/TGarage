@@ -106,11 +106,11 @@ export function BookForm() {
       ) : (
         <p className="text-sm text-muted">Opens WhatsApp with your booking. Nothing is stored on this site.</p>
       )}
-      <div className="flex flex-wrap gap-3">
-        <button type="submit" className="btn btn-blue">
+      <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+        <button type="submit" className="btn btn-blue w-full sm:w-auto">
           Send on WhatsApp
         </button>
-        <a href={`tel:${site.phoneTel}`} className="btn btn-line">
+        <a href={`tel:${site.phoneTel}`} className="btn btn-line w-full sm:w-auto">
           Call {site.phoneDisplay}
         </a>
       </div>

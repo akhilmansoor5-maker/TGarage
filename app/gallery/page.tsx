@@ -24,7 +24,7 @@ export default function GalleryPage() {
         text="Workshop stills from Instagram, mixed with the finish we book for — wash, interiors and coating."
         image={media.foam}
       />
-      <section className="wrap columns-1 gap-4 py-16 sm:columns-2 lg:columns-3">
+      <section className="wrap columns-1 gap-4 py-10 sm:columns-2 sm:py-16 lg:columns-3">
         {photos.map((photo) => (
           <figure key={photo.src} className="mb-4 break-inside-avoid">
             <Photo {...photo} className="w-full" sizes="(min-width: 1024px) 33vw, 50vw" />

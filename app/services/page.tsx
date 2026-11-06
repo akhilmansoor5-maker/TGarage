@@ -41,17 +41,17 @@ export default function ServicesPage() {
 
       {groups.map((group) => (
         <section key={group.key} id={ids[group.key]}>
-          <div className="relative isolate min-h-[38vh] overflow-hidden bg-night">
+          <div className="relative isolate min-h-[28vh] overflow-hidden bg-night sm:min-h-[38vh]">
             <Photo {...groupShot[group.key]} className="absolute inset-0 h-full w-full object-cover" sizes="100vw" />
             <div className="absolute inset-0 bg-gradient-to-t from-night via-night/45 to-night/20" />
-            <div className="wrap relative flex min-h-[38vh] items-end pb-10 pt-16">
+            <div className="wrap relative flex min-h-[28vh] items-end pb-8 pt-12 sm:min-h-[38vh] sm:pb-10 sm:pt-16">
               <div className="max-w-2xl text-white">
-                <h2 className="font-display text-4xl font-semibold tracking-tight md:text-5xl">{group.title}</h2>
+                <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">{group.title}</h2>
                 <p className="mt-3 max-w-xl text-white/80">{group.text}</p>
               </div>
             </div>
           </div>
-          <div className="wrap grid gap-5 py-12 sm:grid-cols-2">
+          <div className="wrap grid gap-4 py-8 sm:grid-cols-2 sm:gap-5 sm:py-12">
             {services
               .filter((service) => service.group === group.key)
               .map((service) => (

@@ -4,8 +4,8 @@ import { addressLine, nav, site } from "@/lib/site";
 
 export function Footer() {
   return (
-    <footer className="bg-night text-white">
-      <div className="wrap grid gap-12 py-16 md:grid-cols-[1.4fr_1fr_1fr]">
+    <footer className="bg-night text-white pb-[calc(4.5rem+env(safe-area-inset-bottom,0px))] md:pb-0">
+      <div className="wrap grid gap-10 py-12 sm:gap-12 sm:py-16 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <Logo className="h-16 w-16" />
           <p className="mt-5 max-w-sm text-[1.05rem] leading-relaxed text-white/70">
